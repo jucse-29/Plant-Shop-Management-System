@@ -1,17 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import HomePage from './pages/HomePage';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ProductsList from './components/ProductsList';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Navbar from './components/Navbar';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+function App() {
+  const location = useLocation();
+
+  return (
+    <React.Fragment>
+      {/* Conditionally render Navbar based on current location */}
+      {location.pathname !== '/' && location.pathname !== '/home'&& <Navbar />}
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsList />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Register />} />
+        <Route path="/home" element={<HomePage />} />
+
+      </Routes>
+    </React.Fragment>
+  );
+}
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
