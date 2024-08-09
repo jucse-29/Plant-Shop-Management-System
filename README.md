@@ -7,6 +7,17 @@
 # 2)cd my-app
 # 3)npm start
 
+# project view
+
+
+
+https://github.com/user-attachments/assets/3b6a5b0b-b4d0-4f88-91cc-cd063db9af69
+
+
+
+
+
+
 
 
 # Website Output:
