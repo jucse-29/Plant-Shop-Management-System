@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
-import { mobile } from "../Responsive";
+
 
 const Type = () => {
   const typewriterRef = useRef(null);

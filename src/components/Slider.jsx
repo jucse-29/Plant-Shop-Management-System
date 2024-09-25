@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { styled } from "styled-components";
-import { sliderItems } from "../Data"; // Ensure you import sliderItems correctly
-
+import { sliderItems } from "../Data"; 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
