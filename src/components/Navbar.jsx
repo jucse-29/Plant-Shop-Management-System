@@ -20,7 +20,7 @@ import Badge from '@mui/material/Badge';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Type from './Type';
 
-const pages = ['Home','Products', 'Login', 'Registration'];
+const pages = ['Home', 'Products', 'Login', 'Registration'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
